@@ -1,0 +1,47 @@
+{
+  "name": "use-async-confirm",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Async, headless useConfirm hook that you can await on",
+  "packageManager": "pnpm@9.12.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/palerdot/use-async-confirm"
+  },
+  "main": "./dist/use-async-confirm.umd.js",
+  "module": "./dist/use-async-confirm.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/use-async-confirm.es.js",
+      "require": "./dist/use-async-confirm.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "storybook dev -p 6006",
+    "storybook:build": "storybook build",
+    "build": "tsc && vite build",
+    "lint": "biome lint src/",
+    "format": "biome format --write src/",
+    "check": "biome check src/",
+    "test": "vitest",
+    "test:cov": "vitest run --coverage",
+    "prepare": "husky install",
+    "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
+  },
+  "peerDependencies": {
+    "react": "18.3.0",
+    "react-dom": "18.3.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": ["biome check"]
+  }
+}
