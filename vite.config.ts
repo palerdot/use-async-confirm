@@ -3,7 +3,7 @@ import path from 'node:path'
 import { defineConfig } from 'vitest/config'
 import dts from 'vite-plugin-dts'
 import tailwindcss from 'tailwindcss'
-import { UserConfigExport } from 'vite'
+import type { UserConfigExport } from 'vite'
 import { name } from './package.json'
 
 const app = async (): Promise<UserConfigExport> => {
@@ -31,7 +31,7 @@ const app = async (): Promise<UserConfigExport> => {
         entry: path.resolve(__dirname, 'src/index.ts'),
         name: formattedName,
         formats: ['es', 'umd'],
-        fileName: (format) => `${formattedName}.${format}.js`,
+        fileName: format => `${formattedName}.${format}.js`,
       },
       rollupOptions: {
         external: ['react', 'react/jsx-runtime', 'react-dom', 'tailwindcss'],
