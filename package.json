@@ -42,6 +42,8 @@
     "dist"
   ],
   "lint-staged": {
-    "src/**/*.{ts,tsx}": ["biome check"]
+    "src/**/*.{ts,tsx}": [
+      "biome check"
+    ]
   }
 }
