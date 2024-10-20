@@ -3,10 +3,11 @@ import path from 'node:path'
 import { defineConfig } from 'vitest/config'
 import tailwindcss from 'tailwindcss'
 import type { UserConfigExport } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 const app = async (): Promise<UserConfigExport> => {
   return defineConfig({
-    plugins: [react()],
+    plugins: [tsconfigPaths(), react()],
     css: {
       postcss: {
         plugins: [tailwindcss],
@@ -14,7 +15,7 @@ const app = async (): Promise<UserConfigExport> => {
     },
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './'),
+        // '@': path.resolve(__dirname, './stories'),
       },
     },
   })

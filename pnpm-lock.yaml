@@ -24,6 +24,12 @@ importers:
       '@chromatic-com/storybook':
         specifier: ^1
         version: 1.9.0(react@18.3.0)
+      '@radix-ui/react-icons':
+        specifier: ^1.3.0
+        version: 1.3.0(react@18.3.0)
+      '@radix-ui/react-slot':
+        specifier: ^1.1.0
+        version: 1.1.0(@types/react@18.2.20)(react@18.3.0)
       '@storybook/addon-essentials':
         specifier: ^8.3.6
         version: 8.3.6(storybook@8.3.6)(webpack-sources@3.2.3)
@@ -69,6 +75,12 @@ importers:
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.10)(webpack@5.95.0(esbuild@0.18.20))
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -78,6 +90,12 @@ importers:
       lint-staged:
         specifier: 13.2.3
         version: 13.2.3
+      lucide-react:
+        specifier: ^0.453.0
+        version: 0.453.0(react@18.3.0)
+      next-themes:
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       postcss:
         specifier: 8.4.47
         version: 8.4.47
@@ -90,12 +108,21 @@ importers:
       prop-types:
         specifier: 15.8.1
         version: 15.8.1
+      sonner:
+        specifier: ^1.5.0
+        version: 1.5.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       storybook:
         specifier: ^8.3.6
         version: 8.3.6
+      tailwind-merge:
+        specifier: ^2.5.4
+        version: 2.5.4
       tailwindcss:
         specifier: 3.4.14
         version: 3.4.14
+      tailwindcss-animate:
+        specifier: ^1.0.7
+        version: 1.0.7(tailwindcss@3.4.14)
       typescript:
         specifier: 5.1.6
         version: 5.1.6
@@ -105,6 +132,9 @@ importers:
       vite-plugin-dts:
         specifier: 3.5.1
         version: 3.5.1(@types/node@20.4.9)(rollup@3.29.5)(typescript@5.1.6)(vite@4.4.9(@types/node@20.4.9)(less@4.2.0)(terser@5.36.0))
+      vite-tsconfig-paths:
+        specifier: ^5.0.1
+        version: 5.0.1(typescript@5.1.6)(vite@4.4.9(@types/node@20.4.9)(less@4.2.0)(terser@5.36.0))
       vitest:
         specifier: 0.34.1
         version: 0.34.1(jsdom@22.1.0)(less@4.2.0)(terser@5.36.0)
@@ -496,6 +526,29 @@ packages:
   '@pkgjs/parseargs@0.11.0':
     resolution: {integrity: sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==}
     engines: {node: '>=14'}
+
+  '@radix-ui/react-compose-refs@1.1.0':
+    resolution: {integrity: sha512-b4inOtiaOnYf9KWyO3jAeeCG6FeyfY6ldiEPanbUjWd+xIk5wZeHa8yVwmrJ2vderhu/BQvzCrJI0lHd+wIiqw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+
+  '@radix-ui/react-icons@1.3.0':
+    resolution: {integrity: sha512-jQxj/0LKgp+j9BiTXz3O3sgs26RNet2iLWmsPyRz2SIcR4q/4SbazXfnYwbAr+vLYKSfc7qxzyGQA1HLlYiuNw==}
+    peerDependencies:
+      react: ^16.x || ^17.x || ^18.x
+
+  '@radix-ui/react-slot@1.1.0':
+    resolution: {integrity: sha512-FUCf5XMfmW4dtYl69pdS4DbxKy8nj4M7SafBgPllysxmdachynNflAdp/gCsnYWNDnge6tI9onzMp5ARYc1KNw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   '@rollup/pluginutils@5.1.2':
     resolution: {integrity: sha512-/FIdS3PyZ39bjZlwqFnWqCOVnW7o963LtKMwQOD0NhQqw22gSr2YY1afu3FxRip4ZCZNsD5jq6Aaz6QV3D/Njw==}
@@ -1264,6 +1317,9 @@ packages:
     resolution: {integrity: sha512-rNjApaLzuwaOTjCiT8lSDdGN1APCiqkChLMJxJPWLunPAt5fy8xgU9/jNOchV84wfIxrA0lRQB7oCT8jrn/wrQ==}
     engines: {node: '>=6.0'}
 
+  class-variance-authority@0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+
   clean-stack@2.2.0:
     resolution: {integrity: sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==}
     engines: {node: '>=6'}
@@ -1279,6 +1335,14 @@ packages:
   cli-truncate@3.1.0:
     resolution: {integrity: sha512-wfOBkjXteqSnI59oPcJkcPl/ZmwvMMOj340qUIY1SKZCv0B9Cf4D4fAucRkIKQmsIuYK3x1rrgU7MeGRruiuiA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+
+  clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
+
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
 
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
@@ -1722,6 +1786,9 @@ packages:
     resolution: {integrity: sha512-WOBp/EEGUiIsJSp7wcv/y6MO+lV9UoncWqxuFfm8eBwzWNgyfBd6Gz+IeKQ9jCmyhoH99g15M3T+QaVHFjizVA==}
     engines: {node: '>=4'}
 
+  globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
+
   gopd@1.0.1:
     resolution: {integrity: sha512-d65bNlIadxvpb/A2abVdlqKqV563juRnZ1Wtk6s1sIR8uNsXR70xqIzVqxVf1eTqDunwT2MkczEeaezCKTZhwA==}
 
@@ -2118,6 +2185,11 @@ packages:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
     engines: {node: '>=10'}
 
+  lucide-react@0.453.0:
+    resolution: {integrity: sha512-kL+RGZCcJi9BvJtzg2kshO192Ddy9hv3ij+cPrVPWSRzgCWCVazoQJxOjAwgK53NomL07HB7GPHW120FimjNhQ==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0-rc
+
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
     hasBin: true
@@ -2248,6 +2320,12 @@ packages:
 
   neo-async@2.6.2:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
+
+  next-themes@0.3.0:
+    resolution: {integrity: sha512-/QHIrsYpd6Kfk7xakK4svpDI5mmXP0gfvCoJdGpZQ2TOrQZmsW0QxjaiLn8wbIKjtm4BTSqLoix4lxYYOnLJ/w==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18
+      react-dom: ^16.8 || ^17 || ^18
 
   node-releases@2.0.18:
     resolution: {integrity: sha512-d9VeXT4SJ7ZeOqGX6R5EM022wpL+eWPooLI+5UpWn2jCT1aosUQEhQP214x33Wkwx3JQMvIm+tIoVOdodFS40g==}
@@ -2759,6 +2837,12 @@ packages:
     resolution: {integrity: sha512-FC+lgizVPfie0kkhqUScwRu1O/lF6NOgJmlCgK+/LYxDCTk8sGelYaHDhFcDN+Sn3Cv+3VSa4Byeo+IMCzpMgQ==}
     engines: {node: '>=12'}
 
+  sonner@1.5.0:
+    resolution: {integrity: sha512-FBjhG/gnnbN6FY0jaNnqZOMmB73R+5IiyYAw8yBj7L54ER7HB3fOSE5OFiQiE2iXWxeXKvg6fIP4LtVppHEdJA==}
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
     engines: {node: '>=0.10.0'}
@@ -2861,6 +2945,14 @@ packages:
   symbol-tree@3.2.4:
     resolution: {integrity: sha512-9QNk5KwDF+Bvz+PyObkmSYjI5ksVUYtjW7AU22r2NKcfLJcXp96hkDWU3+XndOsUb+AQ9QhfzfCT2O+CNWT5Tw==}
 
+  tailwind-merge@2.5.4:
+    resolution: {integrity: sha512-0q8cfZHMu9nuYP/b5Shb7Y7Sh1B7Nnl5GqNr1U+n2p6+mybvRtayrQ+0042Z5byvTA8ihjlP8Odo8/VnHbZu4Q==}
+
+  tailwindcss-animate@1.0.7:
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+
   tailwindcss@3.4.14:
     resolution: {integrity: sha512-IcSvOcTRcUtQQ7ILQL5quRDg7Xs93PdJEk1ZLbhhvJc7uj/OAhYOnruEiwnGgBvUtaUAJ8/mhSw1o8L2jCiENA==}
     engines: {node: '>=14.0.0'}
@@ -2956,6 +3048,16 @@ packages:
 
   ts-interface-checker@0.1.13:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
+
+  tsconfck@3.1.4:
+    resolution: {integrity: sha512-kdqWFGVJqe+KGYvlSO9NIaWn9jT1Ny4oKVzAJsKii5eoE9snzTJzL4+MMVOMn+fikWGFmKEylcXL710V/kIPJQ==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+    peerDependencies:
+      typescript: ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
 
   tsconfig-paths@4.2.0:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
@@ -3077,6 +3179,14 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
+
+  vite-tsconfig-paths@5.0.1:
+    resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
+    peerDependencies:
       vite: '*'
     peerDependenciesMeta:
       vite:
@@ -3631,6 +3741,23 @@ snapshots:
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
+
+  '@radix-ui/react-compose-refs@1.1.0(@types/react@18.2.20)(react@18.3.0)':
+    dependencies:
+      react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.2.20
+
+  '@radix-ui/react-icons@1.3.0(react@18.3.0)':
+    dependencies:
+      react: 18.3.0
+
+  '@radix-ui/react-slot@1.1.0(@types/react@18.2.20)(react@18.3.0)':
+    dependencies:
+      '@radix-ui/react-compose-refs': 1.1.0(@types/react@18.2.20)(react@18.3.0)
+      react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.2.20
 
   '@rollup/pluginutils@5.1.2(rollup@3.29.5)':
     dependencies:
@@ -4627,6 +4754,10 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
+  class-variance-authority@0.7.0:
+    dependencies:
+      clsx: 2.0.0
+
   clean-stack@2.2.0: {}
 
   cli-cursor@3.1.0:
@@ -4642,6 +4773,10 @@ snapshots:
     dependencies:
       slice-ansi: 5.0.0
       string-width: 5.1.2
+
+  clsx@2.0.0: {}
+
+  clsx@2.1.1: {}
 
   color-convert@1.9.3:
     dependencies:
@@ -5119,6 +5254,8 @@ snapshots:
 
   globals@11.12.0: {}
 
+  globrex@0.1.2: {}
+
   gopd@1.0.1:
     dependencies:
       get-intrinsic: 1.2.4
@@ -5521,6 +5658,10 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
+  lucide-react@0.453.0(react@18.3.0):
+    dependencies:
+      react: 18.3.0
+
   lz-string@1.5.0: {}
 
   magic-string@0.27.0:
@@ -5630,6 +5771,11 @@ snapshots:
   negotiator@0.6.3: {}
 
   neo-async@2.6.2: {}
+
+  next-themes@0.3.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
+    dependencies:
+      react: 18.3.0
+      react-dom: 18.3.0(react@18.3.0)
 
   node-releases@2.0.18: {}
 
@@ -6151,6 +6297,11 @@ snapshots:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 4.0.0
 
+  sonner@1.5.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
+    dependencies:
+      react: 18.3.0
+      react-dom: 18.3.0(react@18.3.0)
+
   source-map-js@1.2.1: {}
 
   source-map-support@0.5.21:
@@ -6247,6 +6398,12 @@ snapshots:
   supports-preserve-symlinks-flag@1.0.0: {}
 
   symbol-tree@3.2.4: {}
+
+  tailwind-merge@2.5.4: {}
+
+  tailwindcss-animate@1.0.7(tailwindcss@3.4.14):
+    dependencies:
+      tailwindcss: 3.4.14
 
   tailwindcss@3.4.14:
     dependencies:
@@ -6349,6 +6506,10 @@ snapshots:
   ts-dedent@2.2.0: {}
 
   ts-interface-checker@0.1.13: {}
+
+  tsconfck@3.1.4(typescript@5.1.6):
+    optionalDependencies:
+      typescript: 5.1.6
 
   tsconfig-paths@4.2.0:
     dependencies:
@@ -6479,6 +6640,17 @@ snapshots:
       - '@types/node'
       - rollup
       - supports-color
+
+  vite-tsconfig-paths@5.0.1(typescript@5.1.6)(vite@4.4.9(@types/node@20.4.9)(less@4.2.0)(terser@5.36.0)):
+    dependencies:
+      debug: 4.3.7
+      globrex: 0.1.2
+      tsconfck: 3.1.4(typescript@5.1.6)
+    optionalDependencies:
+      vite: 4.4.9(@types/node@20.4.9)(less@4.2.0)(terser@5.36.0)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
 
   vite@4.4.9(@types/node@20.4.9)(less@4.2.0)(terser@5.36.0):
     dependencies:
