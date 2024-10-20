@@ -78,8 +78,7 @@
     "vitest": "0.34.1"
   },
   "peerDependencies": {
-    "react": "18.3.0",
-    "react-dom": "18.3.0"
+    "react": "18.3.0"
   },
   "files": [
     "dist"
