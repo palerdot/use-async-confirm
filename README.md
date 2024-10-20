@@ -8,9 +8,11 @@ Async, headless `useConfirm` hook that you can await on.
 
 ```javascript
 // Example usage
-import { confirm, onConfirm, onCancel, open, onOpenChange } from "use-async-confirm"
+import { useConfirm } from "use-async-confirm"
 
 function MyComponent() {
+    const { confirm, onConfirm, onCancel, open, onOpenChange } = useConfirm()
+
     const handleConfirm = async function () {
         // control flow stays in your event handler
         // you can just await on confirm

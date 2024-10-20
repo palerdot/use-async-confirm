@@ -39,4 +39,4 @@ function useConfirm(): ReturnValue {
   }
 }
 
-export default useConfirm
+export { useConfirm }

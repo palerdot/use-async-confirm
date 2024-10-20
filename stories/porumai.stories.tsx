@@ -1,12 +1,27 @@
 import type React from 'react'
+import { useCallback } from 'react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { StoryFn } from '@storybook/react'
 import { toast } from 'sonner'
 
+import { useConfirm } from '../src/'
 import { Toaster } from '@/components/ui/sonner'
 import { Button } from '@/components/ui/button'
+import Dialog from './Dialog'
 
 function Porumai() {
+  const { confirm, onConfirm, onCancel, open, onOpenChange } = useConfirm()
+
+  const handleConfirm = useCallback(async () => {
+    const hasConfirmed = await confirm()
+
+    if (hasConfirmed) {
+      toast.success('porumai ... confirmed  !!!')
+    } else {
+      toast.error('porumai .. .cancelled ... ')
+    }
+  }, [confirm])
+
   return (
     <div className="flex flex-col">
       <div className="p-4 bg-blue-50 text-blue-600 font-medium">
@@ -14,15 +29,20 @@ function Porumai() {
       </div>
       <div>
         <Button
-          variant={'secondary'}
+          variant={'destructive'}
           onClick={() => {
-            console.log('porumai ... button clicked')
-            toast.success('porumai ... button clicked')
+            handleConfirm()
           }}
         >
-          {'porumai'}
+          {'Delete Account'}
         </Button>
       </div>
+      <Dialog
+        open={open}
+        onOpenChange={onOpenChange}
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+      />
     </div>
   )
 }
@@ -30,7 +50,7 @@ function Porumai() {
 function Root({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <Toaster richColors={true} />
+      <Toaster richColors={true} closeButton={true} theme={'light'} />
       {children}
     </>
   )
