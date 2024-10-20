@@ -38,3 +38,5 @@ function MyComponent() {
     )
 }
 ```
+
+Works well with `shadcn` or other UI libraries as it is headless and gives you complete control over how you compose the hooks. Run `pnpm dev` locally to see an example of `shadcn` integration.
