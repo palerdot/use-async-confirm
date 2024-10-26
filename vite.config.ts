@@ -48,6 +48,9 @@ const app = async (): Promise<UserConfigExport> => {
     test: {
       globals: true,
       environment: 'jsdom',
+      // coverage: {
+      //   reporter: ['text', 'json', 'html'],
+      // },
     },
   })
 }

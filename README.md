@@ -2,6 +2,8 @@
 
 Async, headless `useConfirm` hook that you can await on.
 
+![tests](https://github.com/palerdot/use-async-confirm/actions/workflows/test.yml/badge.svg)
+
 - **Async**: returns async `confirm` that you can await on
 - **Headless**: No markup, context or provider to add. You get plain functions from hook that you can compose according to your needs. 
 - **Better DX**: All the control flow stays in your event handler (e.g. onClick). You can simply await on the confirm callback and go on with your app logic
