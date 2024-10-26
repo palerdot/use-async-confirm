@@ -14,9 +14,13 @@ function useConfirm(): ReturnValue {
 
   const onConfirm = useCallback(() => {
     resolver(true)
+    // close the dialog
+    onOpenChange(false)
   }, [resolver])
   const onCancel = useCallback(() => {
     resolver(false)
+    // close the dialog
+    onOpenChange(false)
   }, [resolver])
 
   const handler = useCallback(
