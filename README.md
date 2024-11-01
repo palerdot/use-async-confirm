@@ -8,6 +8,8 @@ Async, headless `useConfirm` hook that you can await on.
 - **Headless**: No markup, context or provider to add. You get plain functions from hook that you can compose according to your needs. 
 - **Better DX**: All the control flow stays in your event handler (e.g. onClick). You can simply await on the confirm callback and go on with your app logic
 
+`v1.x` is compatible with `React` `v18`.
+
 ### Installation
 
 ```shell

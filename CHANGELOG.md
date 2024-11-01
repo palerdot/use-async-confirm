@@ -1,5 +1,9 @@
 # Changelog
 
+### `v1.0.0`
+
+- Major/public release for `React` `v18`
+
 ----------------
 
 ### `v0.1.0`
