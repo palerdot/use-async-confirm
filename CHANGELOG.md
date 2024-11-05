@@ -1,5 +1,9 @@
 # Changelog
 
+### `v1.0.1`
+
+- Update peerDependency to `React v18.0.0`
+
 ### `v1.0.0`
 
 - Major/public release for `React` `v18`
