@@ -1,7 +1,7 @@
 {
   "name": "use-async-confirm",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Async, headless useConfirm hook that you can await on",
   "packageManager": "pnpm@9.12.0",
   "repository": {
